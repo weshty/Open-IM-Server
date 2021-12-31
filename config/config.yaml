@@ -8,8 +8,8 @@ etcd:
   etcdAddr: [ 127.0.0.1:2379 ]
 
 mysql:
-  dbMysqlAddress: [ 127.0.0.1:13306 ]
-  dbMysqlUserName: root
+  dbMysqlAddress: [ 192.168.0.132:3306 ]
+  dbMysqlUserName: openIM
   dbMysqlPassword: openIM
   dbMysqlDatabaseName: openIM
   dbTableName: eMsg
@@ -19,29 +19,29 @@ mysql:
   dbMaxLifeTime: 120
 
 mongo:
-  dbAddress: [ 127.0.0.1:37017 ]
+  dbAddress: [ 192.168.0.132:27017 ]
   dbDirect: false
   dbTimeout: 10
   dbDatabase: openIM
   dbSource: admin
-  dbUserName:
-  dbPassword:
+  dbUserName: openIM
+  dbPassword: openIM
   dbMaxPoolSize: 20
   dbRetainChatRecords: 7
 
 redis:
-  dbAddress: 127.0.0.1:16379
+  dbAddress: 192.168.0.132:6379
   dbMaxIdle: 128
   dbMaxActive: 0
   dbIdleTimeout: 120
-  dbPassWord: openIM
+  dbPassWord: xzbj_2021
 
 kafka:
   ws2mschat:
-    addr: [ 127.0.0.1:9092 ]
+    addr: [ 192.168.0.132:9092 ]
     topic: "ws2ms_chat"
   ms2pschat:
-    addr: [ 127.0.0.1:9092 ]
+    addr: [ 192.168.0.132:9092 ]
     topic: "ms2ps_chat"
   consumergroupid:
     msgToMongo: mongo
